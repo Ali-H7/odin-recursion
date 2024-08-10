@@ -1,4 +1,7 @@
 function fibs(n) {
+  if (n <= 1) {
+    return [0];
+  }
   const array = [0, 1];
   let sum;
   for (let i = 0; i < n - 2; i++) {
@@ -8,9 +11,13 @@ function fibs(n) {
   return array;
 }
 
-console.log(fibs(12));
+console.log(fibs(16));
 
 function fibsRec(n, array = [0, 1]) {
+  if (n <= 1) {
+    return [0];
+  }
+
   if (array.length == n) {
     return array;
   } else {
